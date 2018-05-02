@@ -1,0 +1,7 @@
+<button class="context-menu__toggle-button" {{action "toggleMenu"}}>
+  &#9776; {{! Chinese glyph "the trigram for heaven" (hamburger menu) }}
+</button>
+
+<div class="context-menu__dropdown {{if open 'context-menu--open'}}">
+  {{yield}}
+</div>

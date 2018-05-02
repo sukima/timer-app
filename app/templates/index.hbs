@@ -1,0 +1,12 @@
+{{#context-menu}}
+  {{main-nav showDetails=true}}
+{{/context-menu}}
+
+<div class="main-timer" {{action "toggleTimer"}}>
+  {{#timer-display
+      class="jumbo"
+      seconds=seconds
+      as |displayTime|}}
+    {{displayTime}}
+  {{/timer-display}}
+</div>

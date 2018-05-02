@@ -1,0 +1,18 @@
+<ul class="nav-list">
+  <li class="item">
+    {{#if isPaused}}
+      <button {{action "resume"}}>Resume</button>
+    {{else}}
+      <button {{action "pause"}}>Pause</button>
+    {{/if}}
+  </li>
+  <li class="item"><button {{action "restart"}}>Restart</button></li>
+  <li class="item">{{link-to "Timer" "index"}}</li>
+  <li class="item">{{link-to "Settings" "settings"}}</li>
+  <li class="item">{{link-to "About" "about"}}</li>
+  {{#if showDetails}}
+    <li class="item">Min: {{timer-display seconds=minSeconds}}</li>
+    <li class="item">Avg: {{timer-display seconds=avgSeconds}}</li>
+    <li class="item">Max: {{timer-display seconds=maxSeconds}}</li>
+  {{/if}}
+</ul>

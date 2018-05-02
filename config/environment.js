@@ -20,6 +20,7 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+      sourceUrl: 'https://github.com/sukima/timer-app'
     }
   };
 
@@ -45,6 +46,8 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     // here you can enable a production-specific feature
+    ENV.rootURL = '/';
+    ENV.locationType = 'hash';
   }
 
   return ENV;

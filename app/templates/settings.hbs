@@ -1,0 +1,26 @@
+{{top-bar}}
+
+<form class="content settings-form">
+  <p class="description">
+  <em>Tip:</em> After adjusting the times bookmark this URL to save the times for next future uses.
+  ({{link-to "example" (query-params min="5:00" avg="8:00" max="10:00")}})
+  </p>
+
+  <fieldset class="--max-time">
+    <label>Maximum time {{timer-display seconds=maxSeconds}}</label>
+    {{time-picker showAutoButton=false time=maxTime}}
+    <p class="description">Speech has run over time (red).</p>
+  </fieldset>
+
+  <fieldset class="--avg-time">
+    <label>Average time {{timer-display seconds=avgSeconds}}</label>
+    {{time-picker time=avgTime}}
+    <p class="description">Speech is near going over time (yellow).</p>
+  </fieldset>
+
+  <fieldset class="--min-time">
+    <label>Minimum time {{timer-display seconds=minSeconds}}</label>
+    {{time-picker time=minTime}}
+    <p class="description">Speech has reached the time to qualify (green).</p>
+  </fieldset>
+</form>

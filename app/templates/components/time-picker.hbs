@@ -1,0 +1,9 @@
+{{input type="number" title="hours" max=99 min=0 value=hours}}
+:
+{{input type="number" title="minutes" max=60 min=0 value=minutes}}
+:
+{{input type="number" title="seconds" max=60 min=0 value=seconds}}
+
+{{#if showAutoButton}}
+  <button {{action (mut time) "auto"}}>Auto</button>
+{{/if}}
