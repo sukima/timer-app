@@ -15,7 +15,7 @@ export default Service.extend({
   minTime: 'auto',
   avgTime: 'auto',
   maxTime: '7:00',
-  seconds: 0,
+  _clockTime: 0,
 
   isPaused: reads('clock.isIdle'),
 
@@ -69,20 +69,30 @@ export default Service.extend({
     }
   }),
 
+  seconds: computed('_clockTime', {
+    get() {
+      return floor(this.get('_clockTime') / 1000);
+    }
+  }),
+
   clock: task(function* () {
+    const initialTime = this.get('_clockTime');
+    const sTime = new Date().getTime();
     while (true) {
-      yield timeout(1000);
-      this.incrementProperty('seconds');
+      yield timeout(500);
+      let cTime = new Date().getTime();
+      let clockTime = cTime - sTime + initialTime;
+      this.set('_clockTime', clockTime);
     }
   }).restartable(),
 
   reset() {
     this.get('clock').cancelAll();
-    this.set('seconds', 0);
+    this.set('_clockTime', 0);
   },
 
   restart() {
-    this.set('seconds', 0);
+    this.set('_clockTime', 0);
     this.resume();
   },
 
