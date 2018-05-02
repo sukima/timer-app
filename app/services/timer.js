@@ -14,7 +14,7 @@ const DISQUALIFICATION_OFFSET = 30; // Seconds
 export default Service.extend({
   minTime: 'auto',
   avgTime: 'auto',
-  maxTime: '7:00',
+  maxTime: '07:00',
   _clockTime: 0,
 
   isPaused: reads('clock.isIdle'),
