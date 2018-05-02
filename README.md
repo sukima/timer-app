@@ -1,7 +1,6 @@
 # timer-app
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+A simple yet useful speech or talk timer that follows the [Toastmasters](https://www.toastmasters.org/) recommended timer notifications.
 
 ## Prerequisites
 
