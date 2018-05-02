@@ -46,7 +46,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     // here you can enable a production-specific feature
-    ENV.rootURL = '/';
+    ENV.rootURL = '/test-app/';
     ENV.locationType = 'hash';
   }
 
