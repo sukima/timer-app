@@ -1,8 +1,8 @@
 {
-  "name": "timer-newhaven-io",
-  "version": "0.0.0",
+  "name": "timer-app",
+  "version": "1.0.0",
   "private": true,
-  "description": "Small description for timer-newhaven-io goes here",
+  "description": "A simple timer to track speeches and talks",
   "license": "MIT",
   "author": "",
   "directories": {

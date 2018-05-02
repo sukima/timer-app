@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'timer-newhaven-io',
+    modulePrefix: 'timer-app',
     environment,
     rootURL: '/',
     locationType: 'auto',
