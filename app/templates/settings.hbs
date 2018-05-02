@@ -1,6 +1,8 @@
 {{top-bar}}
 
 <form class="content settings-form">
+  {{#link-to "index" tagName="button" class="close-button" title="close"}}&times;{{/link-to}}
+
   <p class="description">
   <em>Tip:</em> After adjusting the times bookmark this URL to save the times for next future uses.
   ({{link-to "example" (query-params min="5:00" avg="8:00" max="10:00")}})
