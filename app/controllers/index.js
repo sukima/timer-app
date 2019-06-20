@@ -27,6 +27,11 @@ export default Controller.extend({
       } else {
         this.send('pause');
       }
+    },
+
+    resetAndPause() {
+      this.send('restart');
+      this.send('pause');
     }
   }
 });

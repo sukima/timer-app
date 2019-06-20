@@ -2,7 +2,11 @@
   {{main-nav showDetails=true}}
 {{/context-menu}}
 
-<div class="main-timer" {{action "toggleTimer"}}>
+<div
+  class="main-timer"
+  {{action "resetAndPause" on="doubleClick"}}
+  {{action "toggleTimer" on="click"}}
+>
   {{#timer-display
       class="jumbo"
       seconds=seconds
