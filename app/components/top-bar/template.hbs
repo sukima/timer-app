@@ -1,0 +1,13 @@
+<div class="top-bar {{this.timer.classNames}}" ...attributes>
+
+  <TimerDisplay
+    class="header-timer"
+    @seconds={{this.timer.seconds}}
+    as |displayTime|
+  >
+    {{displayTime}} {{if this.timer.isPaused '(paused)'}}
+  </TimerDisplay>
+
+  <MainNav />
+
+</div>

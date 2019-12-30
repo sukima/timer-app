@@ -1,0 +1,11 @@
+<time
+  ...attributes
+  class="timer-display"
+  datetime={{this.dateTime}}
+>
+  {{#if hasBlock}}
+    {{yield this.displayTime}}
+  {{else}}
+    {{this.displayTime}}
+  {{/if}}
+</time>

@@ -1,4 +1,4 @@
-body {
+.ember-application {
   background-color: black;
   color: white;
 }
@@ -188,7 +188,7 @@ a.active {
   color: black;
   padding: 10px 0;
   border-radius: 6px;
-  width: 140px;
+  min-width: 160px;
 }
 
 .context-menu--open {
