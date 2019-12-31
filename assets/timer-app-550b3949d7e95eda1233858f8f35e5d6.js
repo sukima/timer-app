@@ -161,4 +161,4 @@ var r=Object.freeze({PAUSED:"paused",DEFAULT:"default",MINIMUM:"minimum",AVERAGE
 e.STATES=r
 var i=Object.freeze((n(t={},r.PAUSED,"--paused"),n(t,r.DEFAULT,"--default-time"),n(t,r.MINIMUM,"--min-time"),n(t,r.AVERAGE,"--avg-time"),n(t,r.MAXIMUM,"--max-time"),n(t,r.DISQUALIFIED,"--disqualified-time"),t))
 e.CLASSNAMES=i})),define("timer-app/config/environment",[],(function(){try{var e="timer-app/config/environment",t=document.querySelector('meta[name="'+e+'"]').getAttribute("content"),n={default:JSON.parse(decodeURIComponent(t))}
-return Object.defineProperty(n,"__esModule",{value:!0}),n}catch(r){throw new Error('Could not read config from meta tag with name "'+e+'".')}})),runningTests||require("timer-app/app").default.create({sourceUrl:"https://github.com/sukima/timer-app",name:"timer-app",version:"1.3.0+3acf21ef"})
+return Object.defineProperty(n,"__esModule",{value:!0}),n}catch(r){throw new Error('Could not read config from meta tag with name "'+e+'".')}})),runningTests||require("timer-app/app").default.create({sourceUrl:"https://github.com/sukima/timer-app",name:"timer-app",version:"1.3.0+46571bdf"})
