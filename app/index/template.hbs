@@ -1,0 +1,14 @@
+<ContextMenu>
+  <MainNav @showDetails={{true}} />
+</ContextMenu>
+
+<div
+  class="main-timer"
+  role="button"
+  {{on "dblclick" this.timer.reset}}
+  {{on "click" this.timer.toggle}}
+>
+
+  <TimerDisplay class="jumbo" @seconds={{this.timer.seconds}} />
+
+</div>

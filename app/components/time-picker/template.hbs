@@ -1,0 +1,36 @@
+<div class="time-picker" ...attributes>
+
+  <Input
+    type="number"
+    name="hours"
+    title="hours"
+    max="99"
+    min="0"
+    @value={{this.hours}}
+  />
+  :
+  <Input
+    type="number"
+    name="minutes"
+    title="minutes"
+    max="60"
+    min="0"
+    @value={{this.minutes}}
+  />
+  :
+  <Input
+    type="number"
+    name="seconds"
+    title="seconds"
+    max="60"
+    min="0"
+    @value={{this.seconds}}
+  />
+
+  {{#unless @hideAutoButton}}
+    <button type="button" name="auto" {{on "click" (fn @update "auto")}}>
+      Auto
+    </button>
+  {{/unless}}
+
+</div>

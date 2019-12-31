@@ -1,0 +1,24 @@
+<nav class="main-nav" ...attributes>
+
+  <ul class="nav-list">
+    <li class="item">
+      {{#if this.timer.isPaused}}
+        <button type="button" {{on "click" this.timer.resume}}>Resume</button>
+      {{else}}
+        <button type="button" {{on "click" this.timer.pause}}>Pause</button>
+      {{/if}}
+    </li>
+    <li class="item">
+      <button type="button" {{on "click" this.timer.restart}}>Restart</button>
+    </li>
+    <li class="item"><LinkTo @route="index">Timer</LinkTo></li>
+    <li class="item"><LinkTo @route="settings">Settings</LinkTo></li>
+    <li class="item"><LinkTo @route="about">About</LinkTo></li>
+    {{#if @showDetails}}
+      <li class="item">Min: <TimerDisplay @seconds={{this.timer.minSeconds}} /></li>
+      <li class="item">Avg: <TimerDisplay @seconds={{this.timer.avgSeconds}} /></li>
+      <li class="item">Max: <TimerDisplay @seconds={{this.timer.maxSeconds}} /></li>
+    {{/if}}
+  </ul>
+
+</nav>

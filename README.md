@@ -1,6 +1,7 @@
 # timer-app
 
-A simple yet useful speech or talk timer that follows the [Toastmasters](https://www.toastmasters.org/) recommended timer notifications.
+This README outlines the details of collaborating on this Ember application.
+A short introduction of this app could easily go here.
 
 ## Prerequisites
 
@@ -32,6 +33,12 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 * `ember test`
 * `ember test --server`
+
+### Linting
+
+* `yarn lint:hbs`
+* `yarn lint:js`
+* `yarn lint:js --fix`
 
 ### Building
 

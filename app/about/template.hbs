@@ -1,0 +1,40 @@
+<TopBar />
+
+<div class="content">
+  <LinkTo @route="index" @tagName="button" type="button" class="close-button" title="close">&times;</LinkTo>
+
+  <h2>Just A Timer<sup class="small">&trade;</sup></h2>
+  <dl class="info-list">
+    <dt>Version</dt>
+    <dd><code>{{app-version versionOnly=true}}</code> (<code>{{app-version shaOnly=true}}</code>)</dd>
+    <dt>Source</dt>
+    <dd><a href={{this.sourceUrl}}>{{this.sourceUrl}}</a></dd>
+  </dl>
+
+  <p>A simple yet useful speech or talk timer that follows the <a href="https://www.toastmasters.org/">Toastmasters</a> recommended timer notifications.</p>
+
+  <h3>Instructions</h3>
+  <p>The timer will continue to count up. It has three settings that determine when the background color of the timer will change.</p>
+  <dl class="info-list">
+    <dt>Minimum</dt>
+    <dd>The time to reach to meet the minimum speech length. Currently set to <TimerDisplay @seconds={{this.timer.minSeconds}} /> (green)</dd>
+    <dt>Average</dt>
+    <dd>The time that marks the average speech length. Currently set to <TimerDisplay @seconds={{this.timer.avgSeconds}} /> (yellow)</dd>
+    <dt>Maximum</dt>
+    <dd>The time that marks when a speech has run over. Currently set to <TimerDisplay @seconds={{this.timer.maxSeconds}} /> (red)</dd>
+  </dl>
+  <p>Clicking on the <LinkTo @route="index">Timer</LinkTo>  page will pause/resume the timer. Use the <LinkTo @route="settings">Settings</LinkTo> page to change the values above. The values are saved to the URL so your favorite timings can be bookmarked.</p>
+
+  <h3>Keyboard Shortcuts</h3>
+  <p>These keyboard shortcuts are available on the main <LinkTo @route="index">Timer</LinkTo> page.</p>
+  <dl class="info-list">
+    <dt><kbd>Space</kbd></dt>
+    <dd>Pause/Resume timer</dd>
+    <dt><kbd>R</kbd></dt>
+    <dd>Reset the timer</dd>
+    <dt><kbd>S</kbd></dt>
+    <dd>Open the <LinkTo @route="settings">Settings</LinkTo> page</dd>
+    <dt><kbd>H</kbd> or <kbd>?</kbd></dt>
+    <dd>Open this page</dd>
+  </dl>
+</div>
